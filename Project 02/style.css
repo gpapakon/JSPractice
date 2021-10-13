@@ -1,11 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-*,::before,;;::after {
+*,::before,::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+:root{
+    --lightgrey-c: #D9ECFA;
+    --bg-c: #F8F8F0;
+    --border-radios: 25px;
+}
+
 body {
     font-family: 'Lato', sans-serif;
+    height: 100vh;
+    background: url(https://source.unsplash.com/random) center/ cover no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    top: -45px;
+    left: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+h1,h2{
+    font-weight: 100;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    color: var(--lightgrey-c);
+    letter-spacing: 2px;
+}
+
+.btn:active {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.9);
+    color: black;
+}
+
+.btn{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    font-weight: 500;
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.lap-time{
+    width: 400px;
+    font-size: 6rem;
+    background-color: var(--bg-c);
+    border: 1px solid var(--lightgrey-c);
+    border-radius: var(--border-radios);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+#tens {
+    font-size: 2rem;
+}
+
+.controls {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem auto;
+}
+
+.laps-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    font-size: 2rem;
+}
+
+.laps-container span {
+    letter-spacing: 3px;
+}
+
+.laps-container li {
+    border-radius: var(--border-radios);
+}
+
+.laps-container li:nth-child(odd){
+    background-color: var(--bg-c);
+}
+
+.laps-container li:nth-child(even){
+    color: var(--bg-c);
 }
