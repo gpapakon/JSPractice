@@ -6,6 +6,7 @@ window.onload = function()  {
     const startBtn =  document.getElementById("start-btn");
     const stopBtn =  document.getElementById("stop-btn");
     const resetBtn =  document.getElementById("reset-btn");
+    const pauseBtn = document.getElementById("pause-btn")
 
     console.log(startBtn,stopBtn,resetBtn);
     console.log(minutes,tens,seconds);
@@ -23,13 +24,34 @@ window.onload = function()  {
 
     const lap = document.getElementById("laps");
 
+    pauseBtn.onclick = function () {
+        clearInterval(Interval);
+    }
+
     stopBtn.onclick = function () {
         clearInterval(Interval);
         const li = document.createElement("li");
         li.innerHTML = `${minutes.innerHTML}:${seconds.innerHTML}.${tens.innerHTML}`;
         lap.appendChild(li);
-
+        tens.innerHTML = "00";
+        minutes.innerHTML = "00";
+        seconds.innerHTML = "00";
+        minutesSet = 00;
+        secondsSet = 00;
+        tensSet = 00;
     }
+
+    resetBtn.onclick = function () {
+        clearInterval(Interval);
+        tens.innerHTML = "00";
+        minutes.innerHTML = "00";
+        seconds.innerHTML = "00";
+        minutesSet = 00;
+        secondsSet = 00;
+        tensSet = 00;
+    }
+
+    
  
 
 
