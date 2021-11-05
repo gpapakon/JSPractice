@@ -41,8 +41,19 @@ body{
     color: var(--kinda-white);
 }
 
+.nav-container{
+    position: relative;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    align-self: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav-container .logo{
     /*transition delay*/
+    transition-delay: 0.45s;
 }
 
 .menu-toggle{
@@ -107,6 +118,7 @@ body{
     letter-spacing: 2px;
     margin-top: 1.3rem;
     text-align: center;
+    opacity: 0;
 }
 
 .main-nav-list ul{
@@ -124,7 +136,7 @@ body{
 }
 
 .main-nav-list.active::after,
-.main-nav-list.active::after{
+.main-nav-list.active::before{
     width: 25vw;
 }
 
@@ -134,11 +146,16 @@ body{
     transition: .3s cubic-bezier(0.1,0.2,0.3,1.4) 0.55s;
 }
 
-.main-nav-list a{
+.main-nav-list.active a{
     opacity: 1;
     color: var(--kinda-white);
 }
 
 .main-nav-list a:hover{
     text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 2rem;
 }
