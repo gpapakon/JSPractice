@@ -20,3 +20,8 @@ Project 02:<br/>
   A site that shows time and changes back ground image based on it<br/>
   Wana try it out?<br/>
   https://gpapakon.github.io/JSPractice/Project%2004/<br/>
+  
+  Project 05:<br/>
+  A site that has a cool navigation bar<br/>
+  Wana try it out?<br/>
+  https://gpapakon.github.io/JSPractice/Project%20%2005/<br/>
