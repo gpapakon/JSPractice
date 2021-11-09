@@ -34,8 +34,9 @@ body{
     transform: scale(0.98);
 }
 
-i.far.fa-eye{
+#passEye{
     cursor: pointer;
+    color: green;
 }
 
 .form-field input {
