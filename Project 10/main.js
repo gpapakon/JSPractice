@@ -52,6 +52,17 @@ function dragDrop(){
 
 shells.forEach((shell) => {
     shell.addEventListener('click',()=> {
-        
+        const winOrLose = document.querySelector(".overlay");
+        if(shell.childElementCount ==1){
+            pea.style.opacity = "1";
+            winOrLose.style.display ='block';
+            winOrLose.innerHTML = `<h2 class="win">You won </h2>`;
+            setTimeout(() => { location.reload(); }, 1500);
+        }else{
+            pea.style.opacity = "1";
+            winOrLose.style.display ='block';
+            winOrLose.innerHTML = `<h2 class="lose">You lost </h2>`;
+            setTimeout(() => { location.reload(); }, 1500);
+        }
     })
 })
