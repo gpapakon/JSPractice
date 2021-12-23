@@ -24,3 +24,34 @@ function dragEnd(){
     title.innerText = "Find the pea";
     title.style.color = "#fff";
 }
+
+for(const shell of shells){
+    shell.addEventListener("dragover", dragOver);
+    shell.addEventListener("dragenter", dragEnter);
+    shell.addEventListener("dragleave", dragLeave);
+    shell.addEventListener("drop", dragDrop);
+}
+
+function dragOver(e){
+    e.preventDefault();
+}
+
+function dragEnter(e){
+    e.preventDefault();
+    this.className +=" hovered";
+}
+
+function dragLeave(){
+    this.className = "shell";
+}
+
+function dragDrop(){
+    this.className = "shell";
+    this.append(pea);
+}
+
+shells.forEach((shell) => {
+    shell.addEventListener('click',()=> {
+        
+    })
+})
