@@ -49,6 +49,12 @@ body {
   border-radius: 50%;
   top: 5px;
   left: 5px;
+  /*Hide pea */
+  opacity: 0;
+}
+
+.pea:active {
+  opacity: 1;
 }
 .overlay {
   position: absolute;
